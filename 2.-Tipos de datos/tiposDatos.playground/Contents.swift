@@ -61,3 +61,10 @@ let twoThousendOne = twoThousend + UInt16(one) //Esto es casting
 let three = 3 //De entero a double
 let decimalPi = 0.14159
 let piNum = Double(three) + decimalPi
+
+
+//Apodo para los tipos de datos con Type Alias
+
+typealias AudioSample = UInt16 // se busca faciliar la lectura y hacer cambios a futuros de forma simple
+var maxAmplitude = AudioSample.max
+var currentAudioSample : AudioSample
