@@ -48,3 +48,16 @@ let oneMillon = 1_000_000 //guion bajo para simular la coma de numeros grandes
 let jusMoreThanMillon = 1_000_000.000_000_1
 
 
+//Convertir entre tipos de datos (Casting)
+
+let twoThousend: UInt16 = 2_000
+let one: UInt8 = 1
+//let twoThousendOne = twoThousend + one  // Esto va dar error
+
+
+let twoThousendOne = twoThousend + UInt16(one) //Esto es casting
+//Error comun querer pasar el más grande a 32bits y el de 8 bits tambien
+
+let three = 3 //De entero a double
+let decimalPi = 0.14159
+let piNum = Double(three) + decimalPi
