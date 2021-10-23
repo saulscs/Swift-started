@@ -52,3 +52,8 @@ var welcomeMessage: String
 welcomeMessage = "Hola que ace"
 
 var red, green, blue: Double
+
+//Imprimir valores con la función print
+
+let login: Int = 2
+print("El numero de login es \(login)")
