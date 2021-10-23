@@ -30,3 +30,21 @@ let f2:Float = 3.1451556 // hay que castearlo (especificar el tipo) para que sea
 let d1: Double = 3.14159324
 
 let anothetPi = 3 + 0.14159 // swift infiere el tipo de dato
+
+//Literales numéricos
+
+let decimalInteger = 17 // Decimal
+let binaryInteger = 0b10001 // Binario
+let octalInteger = 0o21// Octal
+let hexadecimalInteger = 0x161// Hexadecimal
+
+let decimalDouble = 12.1875
+let exponentDouble = 1.21875e1
+let hexadecimalDouble = 0xC.3p90
+
+let paddedDouble = 000123.456 // Podemos agregar ceros a la izquierda para tener alineadas las cantidades
+let someNumber = 00000097.540
+let oneMillon = 1_000_000 //guion bajo para simular la coma de numeros grandes
+let jusMoreThanMillon = 1_000_000.000_000_1
+
+
