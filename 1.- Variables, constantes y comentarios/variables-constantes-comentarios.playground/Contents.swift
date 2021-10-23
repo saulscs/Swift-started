@@ -1,10 +1,6 @@
 import UIKit // Libreria
 
-
 /**VARIABLES Y CONSTANTES**/
-
-
-
 
 
 //Crea una variable de tipo String llamada parcial1 y asígnale un texto con una nota entre 1 y 10 (sin decimales).
@@ -46,3 +42,13 @@ let miEdadEnTexto = "26";
 let miEdad = Int(miEdadEnTexto) ?? 0;
 
 print("Mi edad es \(miEdad) años");
+
+
+
+//Type Annotations
+
+var welcomeMessage: String
+
+welcomeMessage = "Hola que ace"
+
+var red, green, blue: Double
