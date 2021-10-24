@@ -91,3 +91,28 @@ if agePerson >= 18{
 } else {
     print("No eres mayor de edad")
 }
+
+//Tuplas
+
+let http404Error = (404, "Pagina no encontrada")
+let (statusCode, statusMessage) = http404Error
+print("Status: \(statusCode) mensaje: \(statusMessage)")
+
+let (jusStatusCode, _) = http404Error
+print("Estado es \(jusStatusCode)")
+
+print("Sacar datos directo de la tupla \(http404Error.0)")
+
+
+let http200Status = (statusCode: 200, descripction: "Ok")
+print("El codigo del estado es \(http200Status.statusCode) \(http200Status.descripction)")
+
+
+let httpError: (Int, String) = (404, "Page not found") // Si quieren crearlo como un tipo de Array
+let httpErrorObject: (errorType: Int, message: String) = (errorType: 404, message: "Page not found") // Si quieren tratarlos como Objetos
+
+
+let personalData = (edad: 26, nombre: "Saul", apellido: "Corona")
+
+print("Hola mi nombre es: \(personalData.nombre) \(personalData.apellido) y tengo \(personalData.edad) años")
+
