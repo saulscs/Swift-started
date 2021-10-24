@@ -116,3 +116,19 @@ let personalData = (edad: 26, nombre: "Saul", apellido: "Corona")
 
 print("Hola mi nombre es: \(personalData.nombre) \(personalData.apellido) y tengo \(personalData.edad) años")
 
+
+// Optionals y Nil
+
+let possibleAge = "paco"
+let convertedAge = Int(possibleAge)
+
+var serverErrorCode: Int? = 404
+serverErrorCode = nil
+
+var surveyAnweser: String?
+
+surveyAnweser = "42"
+
+print(surveyAnweser)
+
+
