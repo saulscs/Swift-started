@@ -80,3 +80,20 @@ var rowHeight = 0
 
 rowHeight = contentHeight + (hasImage ? 50 : 10)
 
+// Operador Nil Coalescing
+
+let defaultAge = 18
+var userAge: Int?
+
+var ageToBeUsed = userAge ?? defaultAge // Esto es para poner un valor por defecto en vez de tener nil
+
+let defaultColorName = "red"
+var userColorName: String?
+
+var colorNameToUse = userColorName ?? defaultColorName
+
+
+let defaultUserName = "Antonio balderas"
+var username:String?
+
+var userNameToBeUse = username ?? defaultUserName
