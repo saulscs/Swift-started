@@ -22,3 +22,23 @@ if convertedAge != nil {
 } else{
     print("La edad del usuario es nula \(convertedAge!)")
 }
+
+// Optional Binding
+
+var surveyAnswer: String?
+surveyAnswer = "42"
+
+//Si el optinal survey se puede convertir ejecuta
+if let actualAnswer  = surveyAnswer {
+    //Aqui no es nulo
+    print("El string \(surveyAnswer) tiene el valor \(actualAnswer)")
+} else {
+    print("El string \(surveyAnswer) es nil...")
+}
+
+//Si puedo convertir esto a numero cuatro y no me da optional o nil
+if let firsNumber = Int("4"),
+    let secondNumber = Int("42"),
+        firsNumber < secondNumber && secondNumber < 100{
+            print("\(firsNumber) < \(secondNumber) < 100")
+}
