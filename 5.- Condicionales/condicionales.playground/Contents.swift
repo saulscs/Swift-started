@@ -37,3 +37,31 @@ let minusSix = -6
 let alsoMinusSix = +minusSix
 
 let resto = 17 % 5
+
+
+// Comparaciones
+
+1 == 1
+2 != 1
+2 > 1
+1 < 2
+1 >= 1
+2 <= 1
+
+let name = "Pikachu"
+
+if name == "Pikachu" {
+    print("Este pokemon es \(name)")
+} else {
+    print("Aparecio un \(name) salvaje")
+}
+
+
+// Comparaciones de tuplas
+(1, "Pikachu") < (2, "Chanmander")
+(1, "Pikachu") > (2, "Chanmander")
+(2, "Pikachu") < (2, "Chanmander") // regresa false porque a pesar de ser el mismo numero la c va antes que la p
+(4, "perro") == (4, "perro")
+
+(26, "Saul") > (36, "Juan")
+
