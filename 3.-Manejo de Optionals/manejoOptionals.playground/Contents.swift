@@ -42,3 +42,22 @@ if let firsNumber = Int("4"),
         firsNumber < secondNumber && secondNumber < 100{
             print("\(firsNumber) < \(secondNumber) < 100")
 }
+
+// Unwrap Implícito
+
+let possibleString: String? = "Un string opcional"
+let forcedString: String = possibleString! // Esto es lo que no debemos hacer sin hacer validaciones con if
+
+// Aqui es un presuposicion de que va a funcionar
+let assummedString: String! = "Esto es un string unwraprred de forma implicita" // es como si fuera un optional pero no es nil 
+let implicitString: String = assummedString
+
+if assummedString != nil {
+    print(assummedString!)
+}
+
+if let definiteString = assummedString {
+    print(definiteString)
+}
+
+print(assummedString)
