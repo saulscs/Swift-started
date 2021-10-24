@@ -68,3 +68,26 @@ let piNum = Double(three) + decimalPi
 typealias AudioSample = UInt16 // se busca faciliar la lectura y hacer cambios a futuros de forma simple
 var maxAmplitude = AudioSample.max
 var currentAudioSample : AudioSample
+
+//Booleanos
+
+let orangesAreOrange = true
+let foodIsDelecious = false
+
+var isAged: Bool
+
+isAged = true
+
+if isAged {
+    print("Puede entrar a la fiesta")
+} else {
+    print("No eres mayor de edad")
+}
+
+let agePerson: Int = 31
+
+if agePerson >= 18{
+    print("Puede entrar a la fiesta")
+} else {
+    print("No eres mayor de edad")
+}
