@@ -119,7 +119,7 @@ print("Hola mi nombre es: \(personalData.nombre) \(personalData.apellido) y teng
 
 // Optionals y Nil
 
-let possibleAge = "paco"
+let possibleAge = "21"
 let convertedAge = Int(possibleAge)
 
 var serverErrorCode: Int? = 404
@@ -130,5 +130,4 @@ var surveyAnweser: String?
 surveyAnweser = "42"
 
 print(surveyAnweser)
-
 
