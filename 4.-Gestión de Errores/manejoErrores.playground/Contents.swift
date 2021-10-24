@@ -58,3 +58,33 @@ do{
 }catch ErrorSandwich.noHayPlatosLimpios{
     print("Lavar los platos")
 }
+
+
+// Aserciones (debug) y Precondiciones (build)
+
+let age = -5
+// assert(age >= 0, "La edad no puede ser negativa") // desarrollo
+// precondition (age >= 0, "La edad no puede ser negativa") // producion
+
+//if age > 10 {
+//    print("Puedes subir a la montaña rusa")
+//} else if age >= 0 {
+//    print("Eres muy pequeño")
+//} else {
+//    assertionFailure("La edad de una persona no puede ser negativa")
+//}
+
+
+// Reto
+
+let batteryPercentage = -10
+
+if batteryPercentage < 20,
+    batteryPercentage > 0{
+    print("bateria baja")
+}else if batteryPercentage > 20,
+    batteryPercentage <= 100 {
+    print("bateria ok")
+}else{
+    assertionFailure( "La carga de la bateria no puede ser mayor a 100% o menor a 0%")
+}
