@@ -89,4 +89,18 @@ private func sieveOfEratosthenes(upTo n: Int) -> [Int] {
 }
 
 
-var results = sieveOfEratosthenes(upTo: 100)
+var results = sieveOfEratosthenes(upTo: 5)
+
+
+// Uso de if
+
+var temp = 18
+
+if temp <= 15 {
+    print("Hace frio 🥶")
+} else if temp >= 25 {
+    print("Hace calor 🥵")
+} else {
+    print("Esta todo chido 😃")
+}
+
