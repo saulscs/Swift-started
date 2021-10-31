@@ -83,3 +83,43 @@ for anime in favoriteGames{
 for anime in favoriteGames.sorted(){
     print(anime)
 }
+
+// Iteraciones y operaciones sobre conjuntos
+
+let oddDigits: Set = [1,3,5,7,9]
+let eveDigits: Set = [0,2,4,6,8]
+let primeNumbers: Set = [2,3,5,7]
+
+// A union B = elementos que son o bien de A, o bien de B de los
+oddDigits.union(eveDigits).sorted()
+
+// A intersección B = elementos que son a la vez de A y de B
+oddDigits.intersection(eveDigits)
+eveDigits.intersection(primeNumbers).sorted()
+oddDigits.intersection(primeNumbers).sorted()
+
+// A - B elementos que son de A pero no de B
+oddDigits.subtracting(primeNumbers).sorted()
+
+// A + B = (A-B) union (B-A)
+oddDigits.symmetricDifference(primeNumbers).sorted()
+
+let houseAnimals: Set = ["🐶", "😹"]
+let farmAnimals: Set = ["🐮", "🐓", "🐖", "🐶", "😹"]
+let cityAnimals: Set = ["🐁", "🦋"]
+
+houseAnimals.isSubset(of: farmAnimals)
+farmAnimals.isSuperset(of: houseAnimals)
+// A y B son disjuntos si su intersección es vacia
+farmAnimals.isDisjoint(with: cityAnimals)
+
+let favoriteFood: Set = ["Pozole", "chilaquiles", "Cafe", "uvas", "sandia", "fresas", "chamoyada"]
+let fruits: Set = ["Curuva", "Guanabana", "Mora", "Mandarina", "Naranja", "Manzana", "Banano", "uvas", "sandia", "fresas"]
+
+favoriteFood.isSubset(of: fruits) //Subconjunto
+fruits.isSubset(of: favoriteFood)
+favoriteFood.isSuperset(of: fruits) //Superconjunto
+favoriteFood.intersection(fruits)//Intersección
+favoriteFood.union(fruits) //Unión
+favoriteFood.subtracting(fruits)
+fruits.isDisjoint(with: favoriteFood)
