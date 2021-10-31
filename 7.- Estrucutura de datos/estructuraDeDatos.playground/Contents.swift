@@ -123,3 +123,33 @@ favoriteFood.intersection(fruits)//Intersección
 favoriteFood.union(fruits) //Unión
 favoriteFood.subtracting(fruits)
 fruits.isDisjoint(with: favoriteFood)
+
+// Diccionarios
+
+var namesOfIntegers = [Int: String]() //Clave tipo int valor tipo string
+namesOfIntegers[15] = "Quince" // Clave 15 NO posición
+namesOfIntegers = [:]
+
+var airports: [String: String] = [
+    "YYZ": "Toronto",
+    "DUB": "Dublin",
+    "PMI": "Palma de Mallorca"
+]
+
+airports.count
+airports.isEmpty
+
+airports["LHR"] = "London City"
+airports["LHR"] = "London City Airport"
+
+if let oldValues = airports.updateValue("Dubblin Airport", forKey: "DUB"){
+    print("Se cambio el valor de \(oldValues)")
+}
+
+let countryCodes = ["BR": "Brazil", "GH": "Ghana", "JP": "Japan"]
+print(countryCodes)
+
+
+for k in countryCodes.keys {
+    print(k)
+}
