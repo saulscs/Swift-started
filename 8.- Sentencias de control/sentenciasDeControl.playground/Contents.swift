@@ -52,3 +52,41 @@ for tickTack in stride(from: initialHour, to: endHour, by: intervalo){
     }
     print("time it is:  \(tickTack):00 \(timer)")
 }
+
+
+// Ciclo while
+
+var i = 0
+
+while i <= 10{
+    i += 1
+}
+
+print(i)
+
+repeat {
+    i += 1
+} while i <= 10
+
+print(i)
+
+
+//Algoritmo Criba de Eratóstenes
+//permite hallar todos los números primos menores que un número natural dado.
+
+private func sieveOfEratosthenes(upTo n: Int) -> [Int] {
+    var primeNumbers = [Int]()
+    var composite = [Bool](repeating: false, count: n + 1)
+    for i in 2...n {
+        if !composite[i] {
+            primeNumbers.append(i)
+            for multiple in stride(from: i * i, through: n, by: i) {
+                composite[multiple] = true
+            }
+        }
+    }
+    return primeNumbers
+}
+
+
+var results = sieveOfEratosthenes(upTo: 100)
