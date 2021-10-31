@@ -54,3 +54,32 @@ for item in shoppingList{
 for (idx, item) in shoppingList.enumerated(){
     print("Item \(idx+1): \(item)")
 }
+
+
+// Conjuntos
+
+var letters = Set<Character>()
+letters.count
+letters.insert("a")
+letters.insert("h")
+letters
+
+var favoriteGames : Set<String> = ["One piece", "Evangelion", "Naruto"]
+
+favoriteGames.insert("Madoka magica")
+
+if let removeGames = favoriteGames.remove("Evangelion"){
+    print("Se elimino \(removeGames)")
+}
+
+if favoriteGames.contains("Naruto"){
+    print("Besto shounen")
+}
+
+for anime in favoriteGames{
+    print(anime)
+}
+
+for anime in favoriteGames.sorted(){
+    print(anime)
+}
