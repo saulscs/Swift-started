@@ -146,6 +146,9 @@ if let oldValues = airports.updateValue("Dubblin Airport", forKey: "DUB"){
     print("Se cambio el valor de \(oldValues)")
 }
 
+
+// Iteración en diccionarios
+
 let countryCodes = ["BR": "Brazil", "GH": "Ghana", "JP": "Japan"]
 print(countryCodes)
 
@@ -153,3 +156,24 @@ print(countryCodes)
 for k in countryCodes.keys {
     print(k)
 }
+
+
+for (key, value) in airports{
+    print("\(key)-\(value)")
+}
+
+for airports in airports.keys{
+    print(airports)
+}
+
+for airports in airports.values{
+    print(airports)
+}
+
+let aiportKeys = [String](airports.keys) // si necesitamos cruzar valores esto no nos sirve mejor usar bucles
+let airportNames = [String](airports.values)
+
+
+let aiportKeysSorted = [String](airports.keys.sorted())
+let airportNamesSorted = [String](airports.values.sorted())
+
