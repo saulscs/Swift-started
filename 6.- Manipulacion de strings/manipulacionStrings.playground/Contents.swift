@@ -94,7 +94,7 @@ for index in 0...10 {
 
 // Índices de Strings
 
-let greeting = "Hola que hace"
+let greeting = "Hola, que hace"
 greeting[greeting.startIndex]
 greeting[greeting.index(before: greeting.endIndex)]
 // No existe el concepto como ultimo elemento del array, en realidad estamos accediente al penultimo
@@ -113,5 +113,36 @@ welcome.remove(at: welcome.index(before: welcome.endIndex))
 
 // Substrings
 
+greeting
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let firstPart = greeting[..<index]
+
+let newString = String(firstPart)
+
+// Prefijos y Sufijos
+
+let newGreeting = "Hola, soy saul"
+newSomeString.hasPrefix("Hola") // Si empieza con un cadena
+newSomeString.hasSuffix("o") // si finaliza con una cadena
+
+let collection = [
+    "Act 1 Scene 1", "Act 1 Scene 2", "Act 1 Scene 3", "Act 1 Scene 4",
+]
+
+var act1SceneCount = 0
+for scene in collection{
+    if scene.hasPrefix("Act 1"){
+        act1SceneCount += 1
+    }
+}
+
+print("No scenas acto 1: \(act1SceneCount)")
 
 
+// Representaciones Unicode
+
+let ghost = "Fantasma 👻"
+
+for codeUnit in ghost.utf8{
+    print(codeUnit, terminator: " ")
+}
