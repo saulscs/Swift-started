@@ -97,3 +97,6 @@ let defaultUserName = "Antonio balderas"
 var username:String?
 
 var userNameToBeUse = username ?? defaultUserName
+
+// Rangos
+
