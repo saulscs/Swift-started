@@ -193,3 +193,33 @@ for ch in sentence{
 }
 
 filteredSentence
+
+//Fallthrough
+
+let integerDescribe = 7
+var description = "El numero \(integerDescribe) es"
+
+switch integerDescribe{
+case 2,4,5,3,1,9:
+    description += " un numero primo, y"
+    fallthrough // permite caer ademas en el siguiente caso
+default:
+    description += " un numero entero"
+}
+
+
+// Uso de return y guard
+
+var people = ["name": "Juan Gabriel", "age": 21, "isMale": true] as  [String: Any]
+
+
+func testUserValidation(person: [String: Any]){
+    guard let surname = person["surname"] else{
+        print("El nombre es desconosida")
+        return
+    }
+    print(surname)
+}
+
+ 
+testUserValidation(person: people)
