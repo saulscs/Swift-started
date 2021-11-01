@@ -104,3 +104,16 @@ if temp <= 15 {
     print("Esta todo chido 😃")
 }
 
+
+// Uso de Switch
+
+let someCharacter = "z"
+
+switch someCharacter {
+case "a":
+        print("es la primera letra del alfabeto")
+case "z":
+        print("Ultima letra")
+default:
+    print("Ninguna de las anteriores")
+}
