@@ -117,3 +117,79 @@ case "z":
 default:
     print("Ninguna de las anteriores")
 }
+
+//Switch usando rangos - Interval matching
+
+let moons = 62
+let phrase = "Lunas de saturno"
+let natutalCount: String
+
+switch(moons){
+case 0:
+    natutalCount = "No hay"
+case 1..<5:
+    natutalCount = "Hay una cuantas"
+case 5..<12:
+    natutalCount = "Hay muchas"
+default:
+    natutalCount = "Incontables"
+}
+
+// Switch usando tuplas
+
+let somePoint = (1,1)
+switch somePoint {
+case (0,0):
+    print("El punto \(somePoint) es el origen de las coordenadas")
+case (_, 0):
+    print("El punto \(somePoint) esta en eje x")
+case (0, _):
+    print("El punto \(somePoint) esta en eje y")
+case (-2...2, -2...2):
+    print("El punto \(somePoint) esta en el interior de lado 4")
+default:
+    print("El punto \(somePoint) esta por ahi")
+}
+
+
+//Switch con casos compuestos
+
+let anotherCharacter: Character = "k"
+
+switch anotherCharacter{
+case "a", "e", "i", "o", "u":
+    print("Es vocal")
+case "c", "d", "f":
+    print("Es consonante")
+default:
+    print("ni una ni otra")
+    
+}
+
+
+let sillAnotherPoint = (9,5)
+switch sillAnotherPoint{
+case (let distance, 0), (0, let distance):
+    print("Se halla sobre el eje, a distancia \(distance) del origen")
+default:
+    print("No está sobre el eje")
+}
+
+// Continue y break - Control transference sentences
+
+
+let sentence = "Las mentes grandes piensan igual"
+var filteredSentence = ""
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u"]
+
+for ch in sentence{
+    if charactersToRemove.contains(ch){
+        continue
+    }
+    filteredSentence.append(ch)
+    if ch == "d"{
+        break
+    }
+}
+
+filteredSentence
