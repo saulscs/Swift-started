@@ -1,7 +1,8 @@
 import UIKit
 import Foundation
 
-/**FUNCIONES**/
+
+// MARK: - /**FUNCIONES**/
 
 // Declarar una función
 
@@ -169,3 +170,29 @@ while value != 0{
 }
 
 print("Cero")
+
+
+// Funciones anidadas - cuando una función se encuentra dentro de otra
+
+func chooseStepFunction2(backward: Bool) -> (Int) -> Int {
+    func stepForward(_ input: Int) -> Int {
+        return input + 1
+    }
+
+    func stepBackward(_ input: Int) -> Int {
+        return input - 1
+    }
+    return backward ? stepBackward : stepForward
+}
+
+var value2 = 7
+let moveNearerZero = chooseStepFunction2(backward: value > 0)
+while value != 0 {
+    print("\(value)...")
+    value = moveNearerZero(value)
+}
+print("Cero2!!")
+
+
+
+
