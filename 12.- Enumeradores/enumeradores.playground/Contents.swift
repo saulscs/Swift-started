@@ -6,7 +6,7 @@ enum someEnumeration{
     //Aqui va la definición del enumerado
 }
 
-enum CompassPoint{ // solo se toman encuenta los valores disponibles
+enum CompassPoint: String { // solo se toman encuenta los valores disponibles
     case north
     case south
     case east
@@ -14,8 +14,8 @@ enum CompassPoint{ // solo se toman encuenta los valores disponibles
 }
 
 
-enum Planet{
-    case mercury, venus, mars, jupiter, saturn, uranus, neptune
+enum Planet: Int{
+    case mercury = 1, venus, mars, jupiter, saturn, uranus, neptune
 }
 
 
@@ -59,3 +59,45 @@ for beverage in Beverage.allCases { // Ciclo for
 //Enumerations, "códigos de barras"
 
 
+enum Barcode {
+    case upc(Int, Int, Int,Int)
+    case qrCode(String)
+}
+
+var producBarCode = Barcode.upc(8, 7897, 3233, 3)
+producBarCode = .qrCode("DSADFAS")
+
+
+switch producBarCode {
+case let .upc(numberSystem, manuFacturer, product, check):
+    print("UPC: \(numberSystem), \(manuFacturer), \(product), \(check)")
+case .qrCode(let productCode):
+    print("QR: \(productCode)")
+}
+
+//Enumeradores con raw values
+
+enum ASCIIControlCharacter: Character{
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+let earthOrder = Planet.mercury.rawValue
+
+let northDirection = CompassPoint.north.rawValue
+
+let possiblePlanet = Planet(rawValue: 5)
+
+let planetPosition = 11
+
+if let anyPlanet = Planet(rawValue: planetPosition){
+    switch anyPlanet {
+    case .mercury:
+        print("Este es mercurio")
+    default:
+        print("No es seguro este planeta")
+    }
+} else {
+    print("El planeta indicado no existe...")
+}
